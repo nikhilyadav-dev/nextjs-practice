@@ -1,14 +1,12 @@
 import Link from "next/link";
 
-
-const Blogs = () => {
-  console.log("Blogs Page");
+const Home = () => {
   return (
     <>
       <nav>
         <ul className="navbar">
           <li>
-            <Link href="/" className="nav-link">
+            <Link href="/" className="nav-link active">
               Home
             </Link>
           </li>
@@ -23,29 +21,18 @@ const Blogs = () => {
             </Link>
           </li>
           <li>
-            <Link href="/blogs" className="nav-link active">
+            <Link href="/blogs" className="nav-link">
               Blogs
             </Link>
           </li>
         </ul>
       </nav>
       <div>
-        <h1>Welcome to Our Blog</h1>
-        <ol className="blog-links">
-          <li>
-            <Link href="/blogs/1">Blog 1</Link>
-          </li>
-          <li>
-            <Link href="/blogs/2">Blog 2</Link>
-          </li>
-          <li>
-            <Link href="/blogs/3">Blog 3</Link>
-          </li>
-          <Likes></Likes>
-        </ol>
+        <h1>Home Page</h1>
+        <p>Welcome to our website!</p>
       </div>
     </>
   );
 };
 
-export default Blogs;
+export default Home;

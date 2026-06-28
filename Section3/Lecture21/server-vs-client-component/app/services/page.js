@@ -1,8 +1,7 @@
+import { cookies } from "next/headers";
 import Link from "next/link";
 
-
-const Blogs = () => {
-  console.log("Blogs Page");
+const Services = async () => {
   return (
     <>
       <nav>
@@ -18,34 +17,28 @@ const Blogs = () => {
             </Link>
           </li>
           <li>
-            <Link href="/services" className="nav-link">
+            <Link href="/services" className="nav-link active">
               Services
             </Link>
           </li>
           <li>
-            <Link href="/blogs" className="nav-link active">
+            <Link href="/blogs" className="nav-link">
               Blogs
             </Link>
           </li>
         </ul>
       </nav>
       <div>
-        <h1>Welcome to Our Blog</h1>
-        <ol className="blog-links">
-          <li>
-            <Link href="/blogs/1">Blog 1</Link>
-          </li>
-          <li>
-            <Link href="/blogs/2">Blog 2</Link>
-          </li>
-          <li>
-            <Link href="/blogs/3">Blog 3</Link>
-          </li>
-          <Likes></Likes>
-        </ol>
+        <h1>Our Services</h1>
+        <ul className="services-list">
+          <li>Web Development</li>
+          <li>Mobile App Development</li>
+          <li>Consulting Services</li>
+          <li>Digital Marketing</li>
+        </ul>
       </div>
     </>
   );
 };
 
-export default Blogs;
+export default Services;

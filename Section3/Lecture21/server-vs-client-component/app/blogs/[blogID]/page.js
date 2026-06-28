@@ -1,8 +1,9 @@
 import Link from "next/link";
 
+const Blog = async ({ params }) => {
+  const { blogID } = await params;
+  console.log("blogID: ", blogID);
 
-const Blogs = () => {
-  console.log("Blogs Page");
   return (
     <>
       <nav>
@@ -30,22 +31,12 @@ const Blogs = () => {
         </ul>
       </nav>
       <div>
-        <h1>Welcome to Our Blog</h1>
-        <ol className="blog-links">
-          <li>
-            <Link href="/blogs/1">Blog 1</Link>
-          </li>
-          <li>
-            <Link href="/blogs/2">Blog 2</Link>
-          </li>
-          <li>
-            <Link href="/blogs/3">Blog 3</Link>
-          </li>
-          <Likes></Likes>
-        </ol>
+        <h1>Welcome to Our Blog {blogID}</h1>
+        <h2>Date: {new Date().toLocaleString()}</h2>
+        <p>This is blog {blogID} page.</p>
       </div>
     </>
   );
 };
 
-export default Blogs;
+export default Blog;

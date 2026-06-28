@@ -1,7 +1,18 @@
+"use client";
+
+import Likes from "@/components/Likes";
 import Link from "next/link";
 
-
 const Blogs = () => {
+  //1 Accessing localStorage
+  // if (typeof localStorage !== "undefined") {
+  //   console.log(localStorage);
+  // }
+
+  //2 Accesing window object
+  // if (typeof window !== "undefined") {
+  //   console.log(window);
+  // }
   console.log("Blogs Page");
   return (
     <>
@@ -31,18 +42,7 @@ const Blogs = () => {
       </nav>
       <div>
         <h1>Welcome to Our Blog</h1>
-        <ol className="blog-links">
-          <li>
-            <Link href="/blogs/1">Blog 1</Link>
-          </li>
-          <li>
-            <Link href="/blogs/2">Blog 2</Link>
-          </li>
-          <li>
-            <Link href="/blogs/3">Blog 3</Link>
-          </li>
-          <Likes></Likes>
-        </ol>
+        <Likes />
       </div>
     </>
   );
