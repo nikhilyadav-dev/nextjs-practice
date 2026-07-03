@@ -6,7 +6,7 @@ export default function ErrorPage({ error, reset }) {
   const router = useRouter();
   return (
     <>
-      <p>Something Went Wrong Blog ID Page</p>
+      <p>Something Went Wrong Blog Page</p>
       <button
         onClick={() => {
           startTransition(() => {

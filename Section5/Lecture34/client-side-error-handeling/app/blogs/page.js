@@ -1,7 +1,9 @@
 import Link from "next/link";
 
 const Blogs = () => {
-  console.log("Blogs Page");
+  if (Math.random() > 0.5) {
+    throw new Error("Greater than 0.5");
+  }
   return (
     <>
       <div>
