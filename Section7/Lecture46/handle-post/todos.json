@@ -1,6 +1,27 @@
 [
-  { "id": 1, "text": "Learn Next.js 15", "completed": false },
-  { "id": 2, "text": "Master Node.js", "completed": true },
-  { "id": 3, "text": "Learn MongoDB", "completed": true },
-  { "id": 10, "text": "Complete Task", "completed": true }
+  {
+    "id": 1,
+    "text": "Learn Next.js 15",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "text": "Master Node.js",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "text": "Learn MongoDB",
+    "completed": true
+  },
+  {
+    "id": 10,
+    "text": "Complete Task",
+    "completed": true
+  },
+  {
+    "id": 11,
+    "text": "Completed",
+    "completed": true
+  }
 ]

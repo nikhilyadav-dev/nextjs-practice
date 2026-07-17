@@ -10,37 +10,19 @@ export function GET() {
   });
 }
 
-// export async function POST(request) {
-//   const filePath = path.join(process.cwd(), "todos.json");
-//   const fileContent = await readFile(filePath, "utf-8");
-//   // const todosData = JSON.parse(fileContent);
-//   console.log(fileContent);
-
-// const newTodo = await request.json();
-// const filePath = path.join(process.cwd(), "todos.json");
-// const readData = await readFile(filePath, "");
-// const allTodos = await JSON.parse(readData);
-// console.log(allTodos);
-// const newTodosData = [...todoData, newTodo];
-// console.log(newTodosData);
-// await writeFile(filePath, JSON.stringify(newTodosData));
-// return Response.json({ success: "Todo added successfully" });
-// }
-
 export async function POST(request) {
-  // const filePath = path.join(process.cwd(), "todos.json");
-  // const readTodos = await readFile(filePath, "utf-8");
-  // const data = await JSON.parse(readTodos);
-  // console.log(data);
-
   const filePath = path.join(process.cwd(), "todos.json");
 
   const fileContent = await readFile(filePath, "utf-8");
   const todosData = JSON.parse(fileContent);
 
+  // console.log(todosData);
+
   const newTodo = await request.json();
+  console.log(newTodo);
 
   const newTodosData = [...todosData, newTodo];
+  console.log(newTodosData);
 
   await writeFile(filePath, JSON.stringify(newTodosData, null, 2), "utf-8");
 }
